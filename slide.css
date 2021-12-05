@@ -1,0 +1,108 @@
+:root {
+    --white-color: #fff;
+    --black-color:#000;
+    --text-color:#333;
+    --header-height: 160px;
+    --hover-color:#ce3f3f;
+    --blue-color: blue;
+    --green-color: green;
+    --gray-color: gray;
+    --yellow-color:yellow;
+    --red-color: red;
+    --orange-color:orange;
+    --violet-color:violet;
+}
+* {
+    box-sizing: inherit;/*kế thừa*/
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;/*bỏ dấu gạch chân của chữ*/
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.image_slider{
+    margin-top: 100px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    width: 1111px;
+    height: 700px;
+    
+    overflow: hidden;
+}
+.slides{
+    width: 700%;
+    height: 700px;
+    display: flex;
+    
+}
+.slides input{
+    
+display: none;
+}
+.slie {
+    width:20%;
+    transition: 2s;
+}
+.slie >img{
+    width: 1111px;
+    height: 700px;
+    object-fit: cover;
+}
+
+/* css for manual slide navigation */
+.navigation-manual{
+    position: absolute;
+    width: 55%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid rgb(112, 106, 106);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #837f7f;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+/* css for automatic navigation */
+.navigation-auto{
+    /* position: absolute; */
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.navigation-auto div{
+    border: 2px solid rgb(252, 249, 249);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
